@@ -23,6 +23,7 @@ h1 {
   margin-bottom: 50px;
   font-weight: 500;
   font-size: 2.5rem;
+  color: #1e1e1e;
 }
 
 section {
@@ -30,14 +31,12 @@ section {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3%;
   grid-auto-rows: minmax(0 5%);
-  border: 3px solid black;
+  border: 2px solid #1e1e1e;
   padding: 5%;
   margin: 10%;
   height: 500px;
   width: 500px;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(3px);
 }
@@ -51,15 +50,14 @@ div {
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
-  box-shadow: 1px 1px 1px #d6d6d6;
   font-size: 1.2rem;
   background-color: rgb(228, 228, 228);
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 div:hover {border: 1px solid #d6d6d6;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #d6d6d6;
-  transition: 0.5s;
+  transition: 0.3s;
 }
