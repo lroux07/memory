@@ -61,8 +61,8 @@ div {
 }
 
 div:hover {
-  border: 1px solid #ffffff5a;
+  /* border: 1px solid #ffffff5a; */
   border-radius: 10px;
-  box-shadow: 1px 1px 1px #ffffff5a;
+  box-shadow: 1px 1px 1px #e78696bf;
   transition: 0.5s;
 }
