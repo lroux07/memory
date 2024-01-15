@@ -1,24 +1,39 @@
-let cards = document.querySelectorAll(".cards");
-let returnCard1 = "";
-let returnCard2 = "";
+const cards = document.querySelectorAll(".cards");
+let user_return = 0;
+let game_return = 0;
+let firstCard;
+let secondCard;
 
-function clickCards() {
-  for(let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", ()=> {
-      if(returnCard1 == "") {
-        returnCard1 = cards[i].textContent;
-        cards[i].style.backgroundColor = "rgb(228, 228, 228)";
-        cards[i].style.color = "#1e1e1e";
-      } else if(returnCard2 == "") {
-        returnCard2 = cards[i].textContent;
-        cards[i].style.backgroundColor = "rgb(228, 228, 228)";
-        cards[i].style.color = "#1e1e1e";
-      } else if(returnCard1 !== returnCard2 ) {
-        cards[i].style.backgroundColor = "violet";
-        cards[i].style.color = "violet";
+for(let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", ()=> {
+    const element = cards[i];
+    if(user_return === 0) {
+      firstCard = element;
+      firstCard.style.backgroundColor = "#ffffff5a";
+      firstCard.style.color = "black";
+      user_return ++;
+    }
+    if (user_return === 1) {
+      secondCard = element;
+      if (firstCard === secondCard) {
+        return;
       }
-    });
-  }
-}
+      secondCard.style.backgroundColor = "#ffffff5a";
+      secondCard.style.color = "black";
+      user_return ++;
 
-clickCards();
+      if(firstCard.dataset.indexNumber === secondCard.dataset.indexNumber) {
+        user_return = 0;
+        game_return += 2;  
+      } else {
+        setTimeout(()=> {
+          user_return = 0;
+          secondCard.style.backgroundColor = "violet";
+          secondCard.style.color = "violet";
+          firstCard.style.backgroundColor = "violet";
+          firstCard.style.color = "violet";
+        }, 500)
+      }
+    }
+  });
+}
