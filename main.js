@@ -35,7 +35,7 @@ for(let i = 0; i < cards.length; i++) {
 
       if(firstCard.dataset.indexNumber === secondCard.dataset.indexNumber) {
         user_return = 0;
-        game_return += 2;  
+        game_return += 2;
       } else {
         setTimeout(()=> {
           user_return = 0;
