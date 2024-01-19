@@ -46,5 +46,9 @@ for(let i = 0; i < cards.length; i++) {
         }, 500)
       }
     }
+
+    if(i = cards.length) {
+      alert("Ok")
+    }
   });
 }
